@@ -14,7 +14,7 @@ function ProjectForm() {
     const newProject = { id: uuidv4(), name, client, status, description };
     const projects = JSON.parse(localStorage.getItem('projects')) || [];
     localStorage.setItem('projects', JSON.stringify([...projects, newProject]));
-    navigate.push('/');
+    navigate('/projects'); // maybe change this to navigate('/projects');
   };
 
   return (
